@@ -68,20 +68,20 @@ ExternalProject_Add(
 )
 ExternalProject_Get_Property(BQ_SDL2_PROJ source_dir)
 set(BQ_SDL2_INCLUDE_DIRS ${source_dir}/src/)
-link_directories(${CMAKE_BINARY_DIR}/external/bq_sdl2 DEPENDS BQ_SDL2_PROJ)
+link_directories(${CMAKE_BINARY_DIR}/external/bq_sdl2)
 
 
 #######################################################################
  
 ExternalProject_Add(
     GLM_PROJ
-    PREFIX ${CMAKE_BINARY_DIR}/prefix/glm
+    #PREFIX ${CMAKE_BINARY_DIR}/prefix/glm
     GIT_REPOSITORY https://github.com/g-truc/glm #https://github.com/badquanta/BQ_SDL2_PROJ.git
     TIMEOUT 10
     #UPDATE_COMMAND ${GIT_EXECUTABLE} pull
     #CONFIGURE_COMMAND ""
     #BUILD_COMMAND ""
-    #INSTALL_COMMAND ""
+    INSTALL_COMMAND ""
     LOG_DOWNLOAD ON
     LOG_UPDATE ON
     LOG_CONFIGURE ON
@@ -93,7 +93,7 @@ ExternalProject_Add(
 )
 ExternalProject_Get_Property(GLM_PROJ source_dir)
 set(GLM_INCLUDE_DIRS ${source_dir})
-link_directories(${CMAKE_BINARY_DIR}/external/bq_sdl2 DEPENDS BQ_SDL2_PROJ)
+link_directories(${CMAKE_BINARY_DIR}/external/glm)
 
 ################################################################################################################
 # Only do these if this is the main project, and not if it is included through add_subdirectory

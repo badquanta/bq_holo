@@ -31,10 +31,12 @@ add_library(bq_holo
 	Sprite.hpp
 	types.hpp	
 )
+add_dependencies(bq_holo BQ_SDL2_PROJ)
+add_dependencies(bq_holo GLM_PROJ)
 target_link_libraries(bq_holo bq_sdl2 )
 # We need this directory, and users of our library will need it too
 #target_include_directories(bqpd PUBLIC )
-add_dependencies(bq_holo BQ_SDL2_PROJ GLM_PROJ)
+
 # This depends on (header only) boost
 #target_link_libraries(modern_library PRIVATE Boost::boost)
 include_directories(${DOCTEST_INCLUDE_DIR} ${BQ_UTILS_INCLUDE_DIRS} ${BQ_SDL2_INCLUDE_DIRS} ${GLM_INCLUDE_DIRS})
@@ -54,6 +56,7 @@ foreach(X #################################
 )#########################################
 	message(STATUS "making ${X}_test")
 	add_executable("${X}_test" "${X}_test.cpp")
-	target_link_libraries("${X}_test" bq_sdl)
+	target_link_libraries("${X}_test" bq_holo bq_sdl2)
+	add_dependencies("${X}_test" BQ_SDL2_PROJ doctest GLM_PROJ)
 	add_test("${X}_test" "${X}_test")
 endforeach()

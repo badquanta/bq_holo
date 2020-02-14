@@ -7,9 +7,9 @@
 
 #include "Sprite.hpp"
 
-#include "../sdl2/Log.hpp"
-#include "../sdl2/Renderer.hpp"
-#include "../sdl2/Texture.hpp"
+#include "bq/sdl2/Log.hpp"
+#include "bq/sdl2/Renderer.hpp"
+#include "bq/sdl2/Texture.hpp"
 namespace bq { namespace pd {
     using namespace sdl2;
     bool Sprite::nextFrame() {

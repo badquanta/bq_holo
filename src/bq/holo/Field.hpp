@@ -32,9 +32,10 @@ namespace bq {
           fValues[0] = nullValue;
           nextValueID = 1;
         }
-        virtual ~Field() {
+        virtual ~Field() override {
           //TODO: Gram Destruction?
         }
+
         virtual std::type_index getID() override {
           return ID;
         }

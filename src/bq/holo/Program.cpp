@@ -6,16 +6,16 @@
  */
 
 #include "Program.hpp"
-#include "sdl2/EventDispatch.hpp"
-#include "sdl2/Subsystem.hpp"
+#include "bq/sdl2/EventDispatch.hpp"
+#include "bq/sdl2/Subsystem.hpp"
 #include <SDL2/SDL.h>
 
-#include "sdl2/image.hpp"
-#include "sdl2/Log.hpp"
-#include "sdl2/Renderer.hpp"
-#include "sdl2/Surface.hpp"
-#include "sdl2/ttf/TTF.hpp"
-#include "sdl2/Window.hpp"
+#include "bq/sdl2/image.hpp"
+#include "bq/sdl2/Log.hpp"
+#include "bq/sdl2/Renderer.hpp"
+#include "bq/sdl2/Surface.hpp"
+#include "bq/sdl2/ttf/TTF.hpp"
+#include "bq/sdl2/Window.hpp"
 namespace bq { namespace pd {
   bool ensureWindowCreated(sdl2::Window_sptr &win, int w,
       int h, std::string_view str) {
