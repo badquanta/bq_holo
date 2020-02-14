@@ -1,9 +1,9 @@
-add_library(bq_XXXXXXXXXXXX STATIC
-	XXXXXXXXXXXX.h
-	XXXXXXXXXXXX.cpp	
-)
+#add_library(bq_holo STATIC
+#	holo.h
+#	holo.cpp	
+#)
 foreach(X 
-	XXXXXXXXXXXX
+	holo
 )
 	message(STATUS "ADDING ${X}_test")
 	
@@ -15,3 +15,5 @@ foreach(X
 	#target_link_libraries("${X}_test" PRIVATE doctest::doctest)
 	add_test("${X}_test" "${X}_test")
 endforeach()
+
+add_subdirectory(holo)
