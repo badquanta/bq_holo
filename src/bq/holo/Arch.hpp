@@ -5,8 +5,8 @@
  *      Author: badquanta
  */
 
-#ifndef HOLO_ARCH_HPP_
-#define HOLO_ARCH_HPP_
+#ifndef BQ_HOLO_ARCH_HPP_
+#define BQ_HOLO_ARCH_HPP_
 
 namespace bq {
   namespace holo {
@@ -27,4 +27,4 @@ namespace bq {
   } /* namespace holo */
 } /* namespace bq */
 
-#endif /* HOLO_ARCH_HPP_ */
+#endif /* BQ_HOLO_ARCH_HPP_ */

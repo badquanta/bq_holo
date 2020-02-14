@@ -16,7 +16,7 @@
 #include "bq/sdl2/Surface.hpp"
 #include "bq/sdl2/ttf/TTF.hpp"
 #include "bq/sdl2/Window.hpp"
-namespace bq { namespace pd {
+namespace bq { namespace holo {
   bool ensureWindowCreated(sdl2::Window_sptr &win, int w,
       int h, std::string_view str) {
     return ((win != nullptr)

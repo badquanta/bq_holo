@@ -5,8 +5,8 @@
  *      Author: badquanta
  */
 
-#ifndef HOLO_IFIELD_HPP_
-#define HOLO_IFIELD_HPP_
+#ifndef BQ_HOLO_IFIELD_HPP_
+#define BQ_HOLO_IFIELD_HPP_
 #include "types.hpp"
 namespace bq {
   namespace holo {
@@ -27,4 +27,4 @@ namespace bq {
   } /* namespace holo */
 } /* namespace bq */
 
-#endif /* HOLO_IFIELD_HPP_ */
+#endif /* BQ_HOLO_IFIELD_HPP_ */

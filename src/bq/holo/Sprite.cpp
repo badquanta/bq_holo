@@ -10,7 +10,7 @@
 #include "bq/sdl2/Log.hpp"
 #include "bq/sdl2/Renderer.hpp"
 #include "bq/sdl2/Texture.hpp"
-namespace bq { namespace pd {
+namespace bq { namespace holo {
     using namespace sdl2;
     bool Sprite::nextFrame() {
 

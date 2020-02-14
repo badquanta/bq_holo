@@ -11,7 +11,7 @@
 #include <vector>
 
 #include <bq/sdl2/shared_ptrs.hpp>
-namespace bq {namespace pd {
+namespace bq {namespace holo {
 
     class Sprite {
       public:

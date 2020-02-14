@@ -5,11 +5,11 @@
  *      Author: badquanta
  */
 
-#ifndef PD_FRAMESPERSECOND_HPP_
-#define PD_FRAMESPERSECOND_HPP_
+#ifndef BQ_HOLO_FRAMESPERSECOND_HPP_
+#define BQ_HOLO_FRAMESPERSECOND_HPP_
 #include <bq/sdl2/Timer.hpp>
 namespace bq {
-  namespace pd {
+  namespace holo {
     class FramesPerSecond {
       private:
         long int fFrameCount = 0;
@@ -36,7 +36,7 @@ namespace bq {
 
     };
 
-  } /* namespace pd */
+  } /* namespace holo */
 } /* namespace bq */
 
-#endif /* PD_FRAMESPERSECOND_HPP_ */
+#endif /* BQ_HOLO_FRAMESPERSECOND_HPP_ */

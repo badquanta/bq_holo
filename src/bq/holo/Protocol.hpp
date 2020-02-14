@@ -5,8 +5,8 @@
  *      Author: badquanta
  */
 
-#ifndef HOLO_PROTOCOL_HPP_
-#define HOLO_PROTOCOL_HPP_
+#ifndef BQ_HOLO_PROTOCOL_HPP_
+#define BQ_HOLO_PROTOCOL_HPP_
 #include "IProtocol.hpp"
 namespace bq {
   namespace holo {
@@ -34,4 +34,4 @@ namespace bq {
   } /* namespace holo */
 } /* namespace bq */
 
-#endif /* HOLO_PROTOCOL_HPP_ */
+#endif /* BQ_HOLO_PROTOCOL_HPP_ */

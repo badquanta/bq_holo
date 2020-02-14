@@ -8,7 +8,7 @@
 #include "FramesPerSecond.hpp"
 
 namespace bq {
-  namespace pd {
+  namespace holo {
 
     FramesPerSecond::FramesPerSecond(int target):fTargetFPS(target) {
       // TODO Auto-generated constructor stub
@@ -38,5 +38,5 @@ namespace bq {
       return ticksPerFrame()-fFrameTime.getElapsed();
     }
 
-  } /* namespace pd */
+  } /* namespace holo */
 } /* namespace bq */

@@ -5,8 +5,8 @@
  *      Author: badquanta
  */
 
-#ifndef HOLO_FIELDS_HPP_
-#define HOLO_FIELDS_HPP_
+#ifndef BQ_HOLO_FIELDS_HPP_
+#define BQ_HOLO_FIELDS_HPP_
 #include "types.hpp"
 #include "Field.hpp"
 
@@ -18,4 +18,4 @@ namespace bq{
 }
 
 
-#endif /* HOLO_FIELDS_HPP_ */
+#endif /* BQ_HOLO_FIELDS_HPP_ */

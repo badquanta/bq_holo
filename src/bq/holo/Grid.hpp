@@ -5,8 +5,8 @@
  *      Author: badquanta
  */
 
-#ifndef HOLO_GRID_HPP_
-#define HOLO_GRID_HPP_
+#ifndef BQ_HOLO_GRID_HPP_
+#define BQ_HOLO_GRID_HPP_
 
 namespace bq {
   /**
@@ -41,4 +41,4 @@ namespace bq {
   } /* namespace holo */
 } /* namespace bq */
 
-#endif /* HOLO_GRID_HPP_ */
+#endif /* BQ_HOLO_GRID_HPP_ */

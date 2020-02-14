@@ -5,8 +5,8 @@
  *      Author: badquanta
  */
 
-#ifndef HOLO_TYPES_HPP_
-#define HOLO_TYPES_HPP_
+#ifndef BQ_HOLO_TYPES_HPP_
+#define BQ_HOLO_TYPES_HPP_
 #include <inttypes.h>
 #include <typeinfo>
 #include <typeindex>
@@ -29,4 +29,4 @@ namespace bq {
 
 
 
-#endif /* HOLO_TYPES_HPP_ */
+#endif /* BQ_HOLO_TYPES_HPP_ */
