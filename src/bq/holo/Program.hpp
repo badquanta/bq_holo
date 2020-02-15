@@ -9,7 +9,7 @@
 #define PROGRAM_HPP_
 #include "bq/sdl2/EventDispatch.hpp"
 #include "bq/sdl2/shared_ptrs.hpp"
-
+#include <string_view>
 namespace bq { namespace holo {
 
   bool ensureWindowCreated(sdl2::Window_sptr &win, int w, int h,
