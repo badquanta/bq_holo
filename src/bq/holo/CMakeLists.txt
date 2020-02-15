@@ -8,6 +8,8 @@
 add_library(bq_holo SHARED
 	Arch.hpp
 	Arch.cpp
+	Button.hpp
+	Button.cpp
 	Emitter.hpp
 	Emitter.cpp
 	Field.hpp
@@ -43,6 +45,7 @@ include_directories(${DOCTEST_INCLUDE_DIR} ${BQ_UTILS_INCLUDE_DIRS} ${BQ_SDL2_IN
 
 foreach(X #################################
 	Arch
+	Button
 	Emitter
 	Field	
 	FramesPerSecond
