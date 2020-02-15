@@ -161,7 +161,7 @@ add_subdirectory(src)
 
 install(TARGETS bq_holo	 
 #	LIBRARY bq_holo
-	DESTINATION bq_utils
+	DESTINATION bq_holo
 	PUBLIC_HEADER ${bq_XXXXXXXXXX_PUBLIC_INCLUDE_DIRECTORIES}
 )
 

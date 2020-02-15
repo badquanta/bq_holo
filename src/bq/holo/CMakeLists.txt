@@ -5,7 +5,7 @@
 # file(GLOB HEADER_LIST CONFIGURE_DEPENDS "${ModernCMakeExample_SOURCE_DIR}/include/modern/*.hpp")
 
 # Make an automatic library - will be static or dynamic based on user setting
-add_library(bq_holo 
+add_library(bq_holo SHARED
 	Arch.hpp
 	Arch.cpp
 	Emitter.hpp
