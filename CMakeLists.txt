@@ -79,8 +79,8 @@ ExternalProject_Add(
     GIT_REPOSITORY https://github.com/g-truc/glm #https://github.com/badquanta/BQ_SDL2_PROJ.git
     TIMEOUT 10
     #UPDATE_COMMAND ${GIT_EXECUTABLE} pull
-    #CONFIGURE_COMMAND ""
-    #BUILD_COMMAND ""
+    CONFIGURE_COMMAND ""
+    BUILD_COMMAND ""
     INSTALL_COMMAND ""
     LOG_DOWNLOAD ON
     LOG_UPDATE ON

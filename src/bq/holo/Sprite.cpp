@@ -90,6 +90,7 @@ namespace bq { namespace holo {
     }
 
     Sprite& Sprite::operator=(Sprite &&other) {
+      if(&other==this){return *this;}
       Log::Render.info("Sprite::operator= Copy&&other");
       fTexture = other.fTexture;
       fFrame = other.fFrame;
