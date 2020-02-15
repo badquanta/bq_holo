@@ -7,10 +7,11 @@
 
 #ifndef BUTTON_HPP_
 #define BUTTON_HPP_
-#include "sdl2/EventDispatch.hpp"
+#include <bq/sdl2/EventDispatch.hpp>
+#include <bq/sdl2/shared_ptrs.hpp>
 #include "SDL2/SDL.h"
 
-#include "sdl2/shared_ptrs.hpp"
+
 namespace bq { namespace holo {
   class Button : public sdl2::EventDispatch {
     public:

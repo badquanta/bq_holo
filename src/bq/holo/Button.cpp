@@ -8,8 +8,8 @@
 #include "Button.hpp"
 #include <SDL2/SDL_rect.h>
 
-#include "sdl2/Log.hpp"
-#include "sdl2/Texture.hpp"
+#include <bq/sdl2/Log.hpp>
+#include <bq/sdl2/Texture.hpp>
 namespace bq { namespace holo {
   int Button::trigger(const SDL_Event &e) {
     sdl2::Log::Custom.info(__PRETTY_FUNCTION__);
