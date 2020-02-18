@@ -5,7 +5,7 @@
  *      Author: badquanta
  */
 
-#include "holo.h"
+#include "holo.hpp"
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest/doctest.h>
 namespace bq {

@@ -32,9 +32,11 @@ add_library(${PROJECT_NAME} SHARED)
 # add dependencies this library has.
 # EXAMPLE: 
 add_dependencies(${PROJECT_NAME} bq_utils)
-add_dependencies(${PROJECT_NAME} bq_sdl2)
+add_dependencies(${PROJECT_NAME} BQ_SDL2_PROJ GLM_PROJ) 
 # Add needed libraries.
 # Example: target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES} ${SDL2_TTF_LIBRARIES} ${SDL2_MIXER_LIBRARIES} ${BQ_UTIL_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} bq_sdl2)
+target_link_directories(${PROJECT_NAME} PRIVATE ${CMAKE_BINARY_DIR}/lib)
 #################
 # Describe install locations.
 install(TARGETS ${PROJECT_NAME}
@@ -52,7 +54,7 @@ target_include_directories(${PROJECT_NAME}
 	PUBLIC
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/src/>
 		$<INSTALL_INTERFACE:include/>
-	PRIVATE ${CMAKE_SOURCE_DIR}/src/ ${CMAKE_BINARY_DIR}/include ${BQ_UTILS_INCLUDE_DIRS} ${SDL2_INCLUDE_DIRS} 	${SDL2_IMAGE_INCLUDE_DIRS} 	${SDL2_TTF_INCLUDE_DIRS} ${SDL2_MIXER_INCLUDE_DIRS}
+	PRIVATE ${CMAKE_SOURCE_DIR}/src/ ${CMAKE_BINARY_DIR}/include ${GLM_INCLUDE_DIRS} ${SDL2_INCLUDE_DIRS} 	${SDL2_IMAGE_INCLUDE_DIRS} 	${SDL2_TTF_INCLUDE_DIRS} ${SDL2_MIXER_INCLUDE_DIRS}
 )
 ###############
 # Macro to avoid repetative commands for each: "TRINITY"
@@ -73,7 +75,8 @@ macro(TRINITY compName)
 	#target_link_libraries("${X}_test" PUBLIC bqpd)	
 	#target_link_libraries("${X}_test" PRIVATE doctest::doctest)
 	# Setup the include directories for the tests	
-	target_include_directories("${compName}_test" PUBLIC "${DOCTEST_INCLUDE_DIR}" "${CMAKE_BINARY_DIR}/include")	
+	target_include_directories("${compName}_test" PUBLIC "${GLM_INCLUDE_DIRS}" "${DOCTEST_INCLUDE_DIR}" "${CMAKE_BINARY_DIR}/include")	
+	target_link_directories("${compName}_test" PRIVATE ${CMAKE_BINARY_DIR}/lib)
 	# Register each test with the test-running framework.
 	add_test("${compName}_test" "${compName}_test")
 	# Tell the user that we've configured this component.
