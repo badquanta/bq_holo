@@ -23,6 +23,7 @@ namespace bq { namespace holo {
       } else {
         Log::Render.info("No Frames");
       }
+      return false;
 
     }
     Sprite::Sprite() {// @suppress("Class members should be properly initialized")
@@ -74,7 +75,7 @@ namespace bq { namespace holo {
       Log::Render.info("Sprite Destroyed.");
     }
 
-    Sprite::Sprite(const Sprite &other) {// @suppress("Class members should be properly initialized")
+    /**Sprite::Sprite(const Sprite &other) {// @suppress("Class members should be properly initialized")
       // TODO Auto-generated constructor stub
 
     }
@@ -98,6 +99,6 @@ namespace bq { namespace holo {
       fFrames = other.fFrames;
       return *this;
     }
-  }
+  **/}
 
 } /* namespace bq */

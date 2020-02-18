@@ -12,6 +12,7 @@
 #include <bq/sdl2/Texture.hpp>
 namespace bq { namespace holo {
   int Button::trigger(const SDL_Event &e) {
+    int count = 0;
     sdl2::Log::Custom.info(__PRETTY_FUNCTION__);
     static bool mouseWasOver = false;
     static bool wasPressed = false;
@@ -22,17 +23,14 @@ namespace bq { namespace holo {
         if (SDL_PointInRect(&mPos, &fPosition)){
           if (!mouseWasOver) {
             mouseWasOver = true;
-            return onMouseIn.trigger(e);
+            count+=onMouseIn.trigger(e);
           } else {
-            return onMouseOver.trigger(e);
+            count+=onMouseOver.trigger(e);
           }
         } else {
           if (mouseWasOver) {
             mouseWasOver = false;
-            return onMouseOut.trigger(e);
-          } else {
-            // TODO: Keep ignoring motion data not about us?
-            return false;
+            count+=onMouseOut.trigger(e);
           }
         }
 
@@ -42,11 +40,9 @@ namespace bq { namespace holo {
         if (mouseWasOver) {
           if (!wasPressed) {
             wasPressed = true;
-            return pressed.trigger(e);
+            count+=pressed.trigger(e);
           }
-          return false;
-        } else {
-          return false;
+
         }
 
         break;
@@ -55,17 +51,18 @@ namespace bq { namespace holo {
         if(wasPressed){
           wasPressed = false;
           if(mouseWasOver){
-            clicked.trigger(e);
+            count+=clicked.trigger(e);
           }
-          released.trigger(e);
+          count+=released.trigger(e);
         }
 
         break;
 
       default:
         sdl2::Log::Custom.info("button trigger ignored event.");
-        return false;
+
     }
+    return count;
   }
 
   bool Button::render() const {
@@ -73,7 +70,7 @@ namespace bq { namespace holo {
     return (texture) && (texture->render(fPosition));
   }
   Button::Button(const SDL_Rect &pos, sdl2::Texture_sptr &f)
-      : fPosition(pos), texture(f) {
+      : fPosition(pos),texture(f) {
 
     // TODO Auto-generated constructor stub
 
@@ -88,7 +85,7 @@ namespace bq { namespace holo {
 
     texture = nullptr;
   }
-
+/**
   Button::Button(const Button &other) {
     // TODO Auto-generated constructor stub
 
@@ -108,5 +105,5 @@ namespace bq { namespace holo {
     // TODO Auto-generated method stub
 
   }
-
+**/
 } } /* namespace bq */

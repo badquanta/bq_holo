@@ -11,7 +11,8 @@
 #include <vector>
 
 #include <bq/sdl2/shared_ptrs.hpp>
-namespace bq {namespace holo {
+namespace bq {
+  namespace holo {
 
     class Sprite {
       public:
@@ -29,14 +30,16 @@ namespace bq {namespace holo {
             const SDL_Rect &dst) const;
         virtual bool renderAt(const SDL_Point&, const double,
             const SDL_RendererFlip);
-        Sprite(const Sprite &other);
-        Sprite(Sprite &&other);
-        Sprite& operator=(const Sprite &other);
-        Sprite& operator=(Sprite &&other);
+
         int fFrame;
-        std::vector<SDL_Rect> fFrames;
         SDL_Rect fClip;
+        std::vector<SDL_Rect> fFrames;
         sdl2::Texture_sptr fTexture;
+
+        Sprite(const Sprite &other) = delete;
+        Sprite(Sprite &&other) = delete;
+        Sprite& operator=(const Sprite &other) = delete;
+        Sprite& operator=(Sprite &&other) = delete;
       protected:
     };
 
