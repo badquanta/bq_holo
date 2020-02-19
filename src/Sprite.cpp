@@ -89,7 +89,7 @@ namespace bq { namespace holo {
       // TODO Auto-generated method stub
 
     }
-
+    **/
     Sprite& Sprite::operator=(Sprite &&other) {
       if(&other==this){return *this;}
       Log::Render.info("Sprite::operator= Copy&&other");
@@ -99,6 +99,6 @@ namespace bq { namespace holo {
       fFrames = other.fFrames;
       return *this;
     }
-  **/}
+  }
 
 } /* namespace bq */

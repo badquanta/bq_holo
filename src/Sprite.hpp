@@ -39,7 +39,7 @@ namespace bq {
         Sprite(const Sprite &other) = delete;
         Sprite(Sprite &&other) = delete;
         Sprite& operator=(const Sprite &other) = delete;
-        Sprite& operator=(Sprite &&other) = delete;
+        Sprite& operator=(Sprite &&other);
       protected:
     };
 
